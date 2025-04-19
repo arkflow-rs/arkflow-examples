@@ -10,7 +10,7 @@ struct InputExample;
 impl Input for InputExample {
     async fn connect(&self) -> Result<(), Error> {
         // do nothing
-        info!("InputEmpty::connect");
+        info!("InputExample::connect");
 
         Ok(())
     }
@@ -18,13 +18,13 @@ impl Input for InputExample {
     async fn read(&self) -> Result<(MessageBatch, Arc<dyn Ack>), Error> {
         // Read the data
         tokio::time::sleep(std::time::Duration::from_millis(1000)).await;
-        info!("InputEmpty::read");
+        info!("InputExample::read");
         Ok((MessageBatch::new_binary(vec!["{}".to_string().into_bytes()])?, Arc::new(NoopAck)))
     }
 
     async fn close(&self) -> Result<(), Error> {
         // do nothing
-        info!("InputEmpty::close");
+        info!("InputExample::close");
         Ok(())
     }
 }
