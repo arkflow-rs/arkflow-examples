@@ -7,6 +7,8 @@ This repository contains a collection of examples demonstrating various features
 Currently, the following examples are available:
 
 *   **[SQL UDF](./sql_udf/README.md)**: Demonstrates how to create and register a custom User Defined Function (UDF) for use in SQL queries within ArkFlow.
+*   **[Input](.input/README.md)**: Demonstrates how to create and register a custom Input for use in ArkFlow.
+
 
 ## Getting Started
 
