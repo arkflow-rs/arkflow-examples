@@ -4,10 +4,10 @@ use arkflow_core::input::{Ack, Input, InputBuilder, NoopAck};
 use async_trait::async_trait;
 use tracing::info;
 
-struct InputEmpty {}
+struct InputExample;
 
 #[async_trait]
-impl Input for InputEmpty {
+impl Input for InputExample {
     async fn connect(&self) -> Result<(), Error> {
         // do nothing
         info!("InputEmpty::connect");
@@ -17,6 +17,7 @@ impl Input for InputEmpty {
 
     async fn read(&self) -> Result<(MessageBatch, Arc<dyn Ack>), Error> {
         // Read the data
+        tokio::time::sleep(std::time::Duration::from_millis(1000)).await;
         info!("InputEmpty::read");
         Ok((MessageBatch::new_binary(vec!["{}".to_string().into_bytes()])?, Arc::new(NoopAck)))
     }
@@ -28,13 +29,13 @@ impl Input for InputEmpty {
     }
 }
 
-struct InputEmptyBuilder;
-impl InputBuilder for InputEmptyBuilder {
+struct InputExampleBuilder;
+impl InputBuilder for InputExampleBuilder {
     fn build(&self, _: &Option<serde_json::value::Value>) -> Result<Arc<dyn Input>, Error> {
-        Ok(Arc::new(InputEmpty {}))
+        Ok(Arc::new(InputExample))
     }
 }
 
 pub fn init() {
-    arkflow_core::input::register_input_builder("input_empty", Arc::new(InputEmptyBuilder));
+    arkflow_core::input::register_input_builder("input_example", Arc::new(InputExampleBuilder));
 }
