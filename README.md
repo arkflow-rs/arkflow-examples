@@ -1,4 +1,4 @@
-# ArkFlow Examples
+# ArkFlow Plugin Examples
 
 This repository contains a collection of examples demonstrating various features and use cases of the [ArkFlow](https://github.com/arkflow-rs/arkflow) framework.
 
@@ -18,8 +18,8 @@ Currently, the following examples are available:
 
 1.  Clone this repository:
     ```bash
-    git clone https://github.com/arkflow-rs/arkflow-examples.git
-    cd arkflow-examples
+    git clone https://github.com/arkflow-rs/arkflow-plugin-examples.git
+    cd arkflow-plugin-examples
     ```
 
 2.  Navigate to a specific example directory (e.g., `sql_udf`) and follow the instructions in its `README.md` file.

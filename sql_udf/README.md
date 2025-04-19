@@ -57,10 +57,10 @@ pub fn init() {
 ## Usage
 
 1. Ensure you have Rust and Cargo installed
-2. Clone the ArkFlow examples repository:
+2. Clone the ArkFlow plugin examples repository:
    ```bash
-   git clone https://github.com/arkflow-rs/arkflow-examples.git
-   cd arkflow-examples
+   git clone https://github.com/arkflow-rs/arkflow-plugin-examples.git
+   cd arkflow-plugin-examples
    ```
 3. Build the project:
    ```bash
