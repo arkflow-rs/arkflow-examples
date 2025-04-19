@@ -1,0 +1,24 @@
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+description = "High-performance Rust flow processing engine"
+authors = ["chenquan <chenquan.dev@gmail.com>"]
+repository = "https://github.com/arkflow-rs/arkflow"
+homepage = "https://github.com/arkflow-rs/arkflow"
+license = "Apache-2.0"
+
+[workspace]
+members = [
+    "sql_udf",
+]
+
+resolver = "2"
+
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+datafusion = "46"
+
+# arkflow
+arkflow-plugin = { git = "https://github.com/arkflow-rs/arkflow", rev = "b62aaeff1f68b334a992b7c62f4a0e0c6279ac4b"}
+arkflow-core = { git = "https://github.com/arkflow-rs/arkflow", rev = "b62aaeff1f68b334a992b7c62f4a0e0c6279ac4b" }

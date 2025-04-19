@@ -1,0 +1,10 @@
+[package]
+name = "sql_udf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { workspace = true }
+arkflow-core = {workspace = true}
+arkflow-plugin = {workspace = true}
+datafusion = { workspace = true }
