@@ -9,6 +9,8 @@ license = "Apache-2.0"
 
 [workspace]
 members = [
+    "arkflow",
+    "input",
     "sql_udf",
 ]
 
@@ -17,8 +19,12 @@ resolver = "2"
 
 [workspace.dependencies]
 tokio = { version = "1", features = ["full"] }
+async-trait = "0.1"
 datafusion = "46"
-
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["std", "fmt", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 # arkflow
-arkflow-plugin = { git = "https://github.com/arkflow-rs/arkflow", rev = "b62aaeff1f68b334a992b7c62f4a0e0c6279ac4b"}
+arkflow-plugin = { git = "https://github.com/arkflow-rs/arkflow", rev = "b62aaeff1f68b334a992b7c62f4a0e0c6279ac4b" }
 arkflow-core = { git = "https://github.com/arkflow-rs/arkflow", rev = "b62aaeff1f68b334a992b7c62f4a0e0c6279ac4b" }

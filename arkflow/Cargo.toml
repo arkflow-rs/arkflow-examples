@@ -1,0 +1,22 @@
+[package]
+name = "arkflow"
+version.workspace = true
+edition.workspace = true
+description.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+async-trait = { workspace = true }
+arkflow-core = { workspace = true }
+arkflow-plugin = { workspace = true }
+datafusion = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+input = { path = "../input", version = "0.1.0" }
+sql_udf = { path = "../sql_udf", version = "0.1.0" }
