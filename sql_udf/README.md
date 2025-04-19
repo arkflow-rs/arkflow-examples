@@ -64,7 +64,7 @@ pub fn init() {
    ```
 3. Build the project:
    ```bash
-   cargo build --package sql_udf
+   cargo build
    ```
 
 ## Using in SQL
@@ -82,11 +82,3 @@ You can create more complex UDFs based on this example:
 - Process multiple input parameters
 - Return different data types
 - Implement more complex business logic
-
-## License
-
-This project is licensed under the Apache-2.0 License. See the [LICENSE](https://github.com/arkflow-rs/arkflow/blob/main/LICENSE) file for details.
-
-## Contributing
-
-Issues and pull requests are welcome to the [ArkFlow repository](https://github.com/arkflow-rs/arkflow).

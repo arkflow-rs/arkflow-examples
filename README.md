@@ -26,8 +26,7 @@ Currently, the following examples are available:
 
 3.  Generally, you can build an example using Cargo:
     ```bash
-    # Replace <example_package_name> with the actual package name (e.g., sql_udf)
-    cargo build --package <example_package_name>
+    cargo build 
     ```
 
     Refer to the specific example's `README.md` for detailed build and run instructions.
